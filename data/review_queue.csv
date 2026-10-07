@@ -1,0 +1,2 @@
+item_id,post_id,version,type,alert_id,custom_id,recipient_role,sent_at,deadline,decision,note,decided_by,decided_at,reminders,rollovers,status,stuck_wakes,stuck_last_wake_at,needs_attention,alert_ids
+9d858a53c97f,1,1,review,6ac5d29d5c5e59d9a69e7d4f,blog-2026-10-06-ai-agent-spends-160-domain-human-approval-v1,main,2026-10-07T05:03:25+00:00,2026-10-07T11:03:25+00:00,Approve,,main,2026-10-07T05:11:40+00:00,0,0,closed,0,,,

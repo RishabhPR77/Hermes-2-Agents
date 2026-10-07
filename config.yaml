@@ -1,0 +1,38 @@
+# M91 Blog — project settings (no secrets)
+# Secrets live only in the Hermes profile .env (see .env.example for the names).
+
+project:
+  name: m91-blog
+  workdir: "D:/1-Academics/Subjects/Walkover/m91-blog"
+
+review:
+  # CHANGE ME: human-readable reviewer names (phones live in the profile .env)
+  primary_reviewer_name: "Primary reviewer"
+  backup_reviewer_name: "Backup reviewer"
+  deadline_hours: 6              # no answer by the deadline -> reminder + rollover
+  max_rollovers: 3               # after this many rollovers -> skipped
+  max_revisions: 1               # times a rejected draft is revised (-v2, ...)
+                                 # before the item is skipped; skills read this
+  severity: MEDIUM               # review alerts. Never HIGH or CRITICAL.
+  approve_label: "Approve"
+  reject_label: "Reject"
+  alert_title_prefix: "Blog ready: "   # M91 alert title: prefix + short title
+  alert_title_max: 48                  # short-title length cap (… appended)
+  cron_429_window_minutes: 20          # poller watchdog: how many minutes a
+                                       # rate-limited attempt stays "fresh"
+
+notify_system:
+  severity: LOW                  # failure notices to the primary reviewer's phone
+
+publish:
+  mode: "draft"                  # "draft" | "publish". Start in draft for the
+                                 # first 5 posts; switch to publish later.
+  # CHANGE ME: Docstar parent page ids (set during the Stage 6 live test)
+  blog_parent_page: ""           # the real blog parent page/collection
+  test_parent_page: ""           # a throwaway test parent; test pages deleted after
+
+topics:
+  max_consecutive_same_group: 2  # topic-group balance rule
+  target_words:
+    min: 1000
+    max: 1800
